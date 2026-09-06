@@ -137,9 +137,21 @@ _cert_sha256_hex() {
 _tls_insecure_params() {
     local skip_verify="$1"
     local cert_path="$2"
+    local proto_type="${3:-}"
     local insecure_param=""
+
     if [[ "$skip_verify" == "true" ]]; then
-        insecure_param="&insecure=1"
+        # 仅当显式声明是 xray 协议时才考虑 pcs 指纹；通用协议一律使用 insecure=1
+        if [[ "$proto_type" == "xray" ]]; then
+            local cert_pcs=$(_cert_sha256_hex "$cert_path")
+            if [ -n "$cert_pcs" ]; then
+                insecure_param="&pcs=${cert_pcs}"
+            else
+                insecure_param="&insecure=1"
+            fi
+        else
+            insecure_param="&insecure=1"
+        fi
     fi
     printf '%s' "$insecure_param"
 }
