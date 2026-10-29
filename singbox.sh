@@ -15,7 +15,7 @@ SCRIPT_DIR="$(dirname "$SELF_SCRIPT_PATH")"
 SINGBOX_DIR="/usr/local/etc/sing-box"
 SINGBOX_FIXED_VERSION="1.13.21"
 SINGBOX_CORE_LOCK_FILE="${SINGBOX_DIR}/core-version.lock"
-GITHUB_RAW_BASE="https://raw.githubusercontent.com/0xdabiaoge/singbox-lite/main"
+GITHUB_RAW_BASE="https://raw.githubusercontent.com/gg949/singbox-lite/main"
 SCRIPT_UPDATE_URL="${GITHUB_RAW_BASE}/singbox.sh"
 
 # --- 核心工具函数 ---
