@@ -13,7 +13,7 @@ SINGBOX_DIR="/usr/local/etc/sing-box"
 SINGBOX_BIN="/usr/local/bin/sing-box"
 RELAY_XRAY_BIN="/usr/local/bin/xray"
 RELAY_XRAY_CONFIG="/usr/local/etc/xray/config.json"
-GITHUB_RAW_BASE="https://raw.githubusercontent.com/0xdabiaoge/singbox-lite/main"
+GITHUB_RAW_BASE="https://raw.githubusercontent.com/gg949/singbox-lite/main"
 
 # [整合方案] 检测父进程导出的工具函数
 # 如果独立运行且函数缺失，可在此定义最简兜底逻辑 (可选)
